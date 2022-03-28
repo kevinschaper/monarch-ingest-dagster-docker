@@ -16,3 +16,11 @@ docker build -t ingest .
 ```
 docker run --rm --name ingest --publish=3000:3000 ingest dagit -f monarch_ingest/ingest_pipeline.py -h 0.0.0.0 -p 3000
 ```
+
+## Set up a tunnel
+
+```
+gcloud compute ssh monarch-ingest-dagster -- -N -L 3000:localhost:3000
+```
+
+navigate to http://localhost:3000 and launch the ingest
