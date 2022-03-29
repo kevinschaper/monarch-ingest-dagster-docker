@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.8-buster
 
 RUN git clone https://github.com/monarch-initiative/monarch-ingest.git 
 WORKDIR "monarch-ingest"
